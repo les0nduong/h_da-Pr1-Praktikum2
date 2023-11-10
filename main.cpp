@@ -3,15 +3,20 @@
 #include <algorithm>
 using namespace std;
 void aufgabe6() {
-    int input{};
-    vector<int> arr;
+    unsigned long long input{};
+    unsigned long long ten = 10;
+    //avoid conversion to int
+    vector<unsigned long long> arr;
     cin >> input;
     while (input > 0) {
-        arr.push_back(input % 10);
-        input = (input - input % 10) / 10;
+        arr.push_back(input % ten);
+        input = (input - input % ten) / ten;
     };
+for(unsigned long long int i = arr.size()-1;i != -1;i--){
+    cout<<arr.at(i)<<endl;
 
-    std::for_each(arr.rbegin(), arr.rend(), [](const int n) { std::cout << n << endl; });
+}
+//    std::for_each(arr.rbegin(), arr.rend(), [](const int n) { std::cout << n << endl; });
 
 };
 
@@ -42,16 +47,20 @@ void aufgabe7(){
     cout << saldo << endl;}
 
     void aufgabe9(){
-    long double x0 = 0.001;
-        long double numToFindRoot{},x2{},x1{};
-    ;
+    long double x0 = 1.0;
+    long double numToFindRoot{},x2{},x1{};
 
+    cout << "Enter the any number to find its square root: " << endl;
     cin >> numToFindRoot;
 
-    while(x1 - x0 < 0.000001){
+    do{
         x1 = 0.5*(x0+numToFindRoot/x0);
+        x2 = 0.5*(x1+numToFindRoot/x1);
+        x0 = x1;
+     //   cout << x1 << x2 << endl;
+    } while (abs(x2-x1) > 0.000000000000000001);
 
-    }
+       cout << x2;
 
 
 
@@ -63,6 +72,7 @@ void aufgabe7(){
 }
 
     int main() {
+    aufgabe6();
         return 0;};
 
 
