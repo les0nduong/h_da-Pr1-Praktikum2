@@ -1,0 +1,3 @@
+/workspaces/h_da-Pr1-Praktikum2/build/CMakeFiles/rebuild_cache.dir
+/workspaces/h_da-Pr1-Praktikum2/build/CMakeFiles/edit_cache.dir
+/workspaces/h_da-Pr1-Praktikum2/build/CMakeFiles/untitled1.dir

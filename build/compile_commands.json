@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/workspaces/h_da-Pr1-Praktikum2/build",
+  "command": "/usr/bin/clang++    -g   -std=gnu++17 -o CMakeFiles/untitled1.dir/main.cpp.o -c /workspaces/h_da-Pr1-Praktikum2/main.cpp",
+  "file": "/workspaces/h_da-Pr1-Praktikum2/main.cpp"
+}
+]
