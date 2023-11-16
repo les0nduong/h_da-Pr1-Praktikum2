@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <iomanip>
-
+#include <math.h>
 using namespace std;
 
 void zerlegung(int n)
@@ -30,7 +29,7 @@ void aufgabe_6_A()
 
 void aufgabe_6_D()
 {
-    unsigned long long input{};
+    unsigned long long input{}, power{};
     unsigned long long ten = 10;
     // avoid conversion to int
     vector<unsigned long long> arr;
@@ -42,8 +41,9 @@ void aufgabe_6_D()
         input = (input - input % ten) / ten;
     };
     for (unsigned long long int i = arr.size() - 1; i != -1; i--)
-    {
-        cout << arr.at(i) << endl;
+    {   
+        power = pow(ten,i);
+        cout <<power<<" : " <<arr.at(i) << endl;
     }
 };
 
@@ -100,14 +100,14 @@ void aufgabe_7_D()
     cout << "Please enter how many year you want to run your account: " << endl;
     cin >> time;
     cout << endl
-         << "In year " << now << "you have: " << saldo << endl;
+         << "In year " << now << " you have: " << saldo << endl;
     while (time > 0)
     {
         time = time - 1;
         now = now + 1;
         saldo = saldo + saldo * (zinRate / 100.0);
         cout << endl
-             << "In year " << now << " you have: " << setprecision(5) << saldo << endl;
+             << "In year " << setprecision(0) << now << " you have: " << fixed << setprecision(2) << saldo << endl;
     }
 }
 
@@ -277,13 +277,20 @@ void aufgabe_9_D()
         x1 = 0.5 * (x0 + numToFindRoot / x0);
         x2 = 0.5 * (x1 + numToFindRoot / x1);
         x0 = x1;
-        cout << x1 << "   " << x2 << endl;
+       // cout << x1 << "   " << x2 << endl;
     } while (abs(x2 - x1) > 0.00000001);
 
     cout << x2;
 }
 int main()
 {
-    aufgabe_8_D();
+    //aufgabe_6_A();
+    //aufgabe_6_D();
+    //aufgabe_7_A();
+    //aufgabe_7_D();
+    //aufgabe_8_A();
+    //aufgabe_8_D();
+    //aufgabe_9_A();
+    aufgabe_9_D();
     return 0;
 };

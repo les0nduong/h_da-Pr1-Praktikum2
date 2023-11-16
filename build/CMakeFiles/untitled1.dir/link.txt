@@ -1,1 +1,1 @@
-/usr/bin/clang++  -g   CMakeFiles/untitled1.dir/main.cpp.o  -o untitled1 
+/usr/bin/clang++  -O3 -DNDEBUG   CMakeFiles/untitled1.dir/main.cpp.o  -o untitled1 
