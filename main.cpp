@@ -183,7 +183,8 @@ void aufgabe_8_D()
         cout << "2 - Zahlen eingeben" << endl;
         cout << "3 - Minimum anzeigen" << endl;
         cout << "x - Beenden" << endl;
-        getline(cin, input);
+        cin >> input;
+
         if (input.length() > 1)
         {
             auswahl = '5';
